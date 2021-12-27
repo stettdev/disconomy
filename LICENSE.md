@@ -1,2 +1,2 @@
 
-Copyright (C) 2021 Krzysztof Gocek
+Copyright (C) 2021 Christopher Gocek

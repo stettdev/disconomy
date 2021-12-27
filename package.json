@@ -1,0 +1,40 @@
+{
+  "dependencies": {
+    "@discordjs/builders": "^0.10.0",
+    "@discordjs/rest": "^0.2.0-canary.0",
+    "discord-api-types": "^0.26.0",
+    "discord.js": "^13.4.0",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.5.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "jest": "^27.4.5",
+    "nodemon": "^2.0.15"
+  },
+  "name": "disconomy",
+  "description": "Roleplay Economy Bot for Discord Servers",
+  "version": "0.1.0",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stettdev/disconomy.git"
+  },
+  "keywords": [
+    "economy",
+    "discord",
+    "bot"
+  ],
+  "author": "Christopher Gocek",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/stettdev/disconomy/issues"
+  },
+  "homepage": "https://github.com/stettdev/disconomy#readme"
+}
