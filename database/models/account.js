@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   Account.init({
     userId: DataTypes.STRING,
     guildId: DataTypes.STRING,
+    currentAmount: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'Account',

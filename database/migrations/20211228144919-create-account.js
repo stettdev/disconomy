@@ -13,15 +13,20 @@ module.exports = {
       guildId: {
         type: Sequelize.STRING,
       },
+      currentAmount: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        defaultValue: 200,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
-        default: Sequelize.NOW,
+        defaultValue: Sequelize.fn('NOW'),
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
-        default: Sequelize.NOW,
+        defaultValue: Sequelize.fn('NOW'),
       },
     });
   },
