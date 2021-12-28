@@ -12,6 +12,6 @@
     },
     "rules": {
         "no-console": ["error", { "allow": ["info", "error", "warn"] }],
-        "max-len": ["error", { "ignoreComments": true }]
+        "max-len": ["warn", { "code": 80, "ignoreComments": true, "ignoreStrings": true }]
     }
 }
