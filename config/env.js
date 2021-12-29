@@ -7,6 +7,7 @@ module.exports = {
   Discord: {
     token: process.env.DISCORD_TOKEN,
     appId: process.env.DISCORD_APP_ID,
+    testGuild: process.env.DISCORD_GUILD_ID,
   },
   MySQL: {
     database: process.env.MYSQL_DATABASE,
