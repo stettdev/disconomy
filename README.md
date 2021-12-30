@@ -1,6 +1,6 @@
 # **Disconomy** - a roleplay economy bot for Discord
 
-![GitHub tag main](https://img.shields.io/github/v/tag/stettdev/disconomy?label=main) ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/stettdev/disconomy/develop?label=develop) [![GitHub latest commit](https://badgen.net/github/last-commit/Naereen/Strapdown.js)](https://github.com/stettdev/disconomy/commit/) [![made-with-discordjs](https://img.shields.io/badge/Made%20with-Discord.js-1f425f.svg)](https://www.javascript.com)
+![GitHub tag main](https://img.shields.io/github/v/tag/stettdev/disconomy?label=main) ![GitHub last commit](https://img.shields.io/github/last-commit/stettdev/disconomy)
 
 A Discord bot created for administrators of RP servers to provide them with a playable economy with bank accounts, shops and payments. It's focused on the role-playing aspect of the server rather than mechanical gaming and grind - it's flexible and easy to use for less knowledgeable players.
 
@@ -18,7 +18,7 @@ A Discord bot created for administrators of RP servers to provide them with a pl
 
 ## **Technologies**
 
-[![Node.js](https://img.shields.io/badge/node.js-16.11.1-3C873A?logo=node.js&logoColor=fff)](https://www.nodejs.org/) [![Discord.js](https://img.shields.io/badge/discord.js-v13-738ADB?logo=discord&logoColor=fff)](https://www.nodejs.org/)
+[![Node.js](https://img.shields.io/badge/node.js-16.13.1-3C873A?logo=node.js&logoColor=fff)](https://www.nodejs.org/) [![Discord.js](https://img.shields.io/badge/discord.js-v13-738ADB?logo=discord&logoColor=fff)](https://www.nodejs.org/)
 
 JavaScript and Node.js seemed to be the best choice due to previous experience developing in these technologies. Discord.js is a well-written module with vast and clear documentation which allowed understanding it and writing suitable code.
 
@@ -54,4 +54,8 @@ This was the first-time use of Sequelize in a project. It's a surprisingly compl
 
 The preferred way of contact is an email or through the community on Discord server linked below.
 
-[![Email](https://img.shields.io/badge/email-contact@stett.dev-731C7F?logo=minutemailer&logoColor=fff)](https://discord.gg/kfTHe77twD) [![Discord](https://img.shields.io/discord/883358379869896784?color=%237289da&label=join&logo=discord&logoColor=%23ffffff)](https://discord.gg/kfTHe77twD)
+[![Email](https://img.shields.io/badge/email-contact@stett.dev-731C7F?logo=minutemailer&logoColor=fff)](mailto:contact@stett.dev) [![Discord](https://img.shields.io/discord/883358379869896784?color=%237289da&label=join&logo=discord&logoColor=%23ffffff)](https://discord.gg/kfTHe77twD)
+
+---
+
+Copyright 2021 &copy; **Christopher Gocek**
