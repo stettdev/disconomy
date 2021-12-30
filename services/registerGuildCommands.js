@@ -4,24 +4,24 @@ const { Discord } = require('../config/env');
 const Commands = require('../commands');
 
 (async () => {
-    const commands = [];
-    
-    Commands.forEach((command) => {
-        commands.push(command.data.toJSON());
-    });
+  const commands = [];
 
-    const rest = new REST({ version: 9 }).setToken(Discord.token);
+  Commands.forEach((command) => {
+    commands.push(command.data.toJSON());
+  });
 
-    try {
-        console.info('Started refreshing application (/) commands.');
+  const rest = new REST({ version: 9 }).setToken(Discord.token);
 
-        await rest.put(
-            Routes.applicationGuildCommands(Discord.appId, Discord.testGuild),
-            { body: commands },
-        );
+  try {
+    console.info('Started refreshing application (/) commands.');
 
-        console.info('Successfully reloaded application (/) commands.');
-    } catch (error) {
-        console.error(error);
-    }
+    await rest.put(
+      Routes.applicationGuildCommands(Discord.appId, Discord.testGuild),
+      { body: commands },
+    );
+
+    console.info('Successfully reloaded application (/) commands.');
+  } catch (error) {
+    console.error(error);
+  }
 })();
