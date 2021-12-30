@@ -13,7 +13,8 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.3",
     "jest": "^27.4.5",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "sequelize-cli": "^6.3.0"
   },
   "name": "disconomy",
   "description": "Roleplay Economy Bot for Discord Servers",
@@ -22,6 +23,8 @@
   "scripts": {
     "dev": "nodemon app.js",
     "start": "node app.js",
+    "guildreg": "node ./services/registerGuildCommands.js",
+    "globalreg": "node ./services/registerGlobalCommands.js",
     "lint": "eslint .",
     "test": "jest"
   },
