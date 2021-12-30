@@ -18,7 +18,6 @@
   },
   "name": "disconomy",
   "description": "Roleplay Economy Bot for Discord Servers",
-  "version": "0.1.0",
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js",
