@@ -18,7 +18,7 @@ A Discord bot created for administrators of RP servers to provide them with a pl
 
 ## **Technologies**
 
-[![JavaScript](https://img.shields.io/badge/javascript-ES2021-f7df1e?logo=javascript&logoColor=fff)](https://en.wikipedia.org/wiki/ECMAScript) [![Node.js](https://img.shields.io/badge/node.js-16.13.1-3C873A?logo=node.js&logoColor=fff)](https://www.nodejs.org/) [![Discord.js](https://img.shields.io/badge/discord.js-v13-738ADB?logo=discord&logoColor=fff)](https://www.discord.js.org/)
+[![JavaScript](https://img.shields.io/badge/javascript-ES2021-f7df1e?logo=javascript&logoColor=fff)](https://en.wikipedia.org/wiki/ECMAScript) [![Node.js](https://img.shields.io/badge/node.js-16.13.1-3C873A?logo=node.js&logoColor=fff)](https://www.nodejs.org/) [![Discord.js](https://img.shields.io/badge/discord.js-v13-738ADB?logo=discord&logoColor=fff)](https://discord.js.org)
 
 JavaScript and Node.js seemed to be the best choice due to previous experience developing in these technologies. Discord.js is a well-written module with vast and clear documentation which allowed understanding it and writing suitable code.
 
