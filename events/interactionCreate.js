@@ -8,6 +8,8 @@ module.exports = {
 
     if (!command) return;
 
+    await interaction.deferReply();
+
     try {
       await command.execute(interaction);
     } catch (error) {
