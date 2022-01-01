@@ -10,7 +10,7 @@ module.exports = {
       balance: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        default: 0,
+        defaultValue: 0,
       },
       ownerId: {
         allowNull: false,
@@ -23,12 +23,12 @@ module.exports = {
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
-        default: Sequelize.fn('NOW'),
+        defaultValue: Sequelize.fn('NOW'),
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
-        default: Sequelize.fn('NOW'),
+        defaultValue: Sequelize.fn('NOW'),
       },
     });
   },

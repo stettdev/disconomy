@@ -18,17 +18,17 @@ module.exports = {
       money: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        default: 100,
+        defaultValue: 100,
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
-        default: Sequelize.fn('NOW'),
+        defaultValue: Sequelize.fn('NOW'),
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
-        default: Sequelize.fn('NOW'),
+        defaultValue: Sequelize.fn('NOW'),
       },
     });
   },
