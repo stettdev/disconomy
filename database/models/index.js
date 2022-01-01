@@ -1,11 +1,11 @@
-const Person = require('./person');
 const Account = require('./account');
 const Item = require('./item');
+const Person = require('./person');
 const PersonalItem = require('./personalitem');
 
 module.exports = [
-  Person,
   Account,
   Item,
+  Person,
   PersonalItem,
 ];
