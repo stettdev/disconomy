@@ -55,9 +55,15 @@ Disconomy operates using slash ("/") commands. It allows players to quickly find
 
 ### **Bank account & money transfers**
 
-Use `/account open` to create a new bank account (only one per player).
-If you need to check how much money your accoun has, use `/account balance` command.
+Use `/account open` to **create a new bank account (only one per player).
+If you need to check how much money your account has, use `/account balance` command.
 The `/account close` command will close the account. All funds in the account will be gone as well.
+
+To transfer money between bank account and player's "wallet" you can use `/account deposit` and `/account withdraw` to put money in and take money from the bank account accordingly.
+
+For transfers between players you can use `/account transfer <@player> <amount>` command. Specify the recipient with mention `@player` and the `amount` of money you'd like to transfer to them. You cannot request a money transfer from other players.
+
+Checks are in place to ensure player cannot transfer more money than they have (neither to other player nor between account and wallet).
 
 ### **Purchases & payments**
 
