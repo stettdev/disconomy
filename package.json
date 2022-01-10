@@ -22,8 +22,8 @@
   "scripts": {
     "dev": "nodemon app.js",
     "start": "node app.js",
-    "guildreg": "node ./services/registerGuildCommands.js",
-    "globalreg": "node ./services/registerGlobalCommands.js",
+    "guildreg": "node ./utils/registerGuildCommands.js",
+    "globalreg": "node ./utils/registerGlobalCommands.js",
     "lint": "eslint .",
     "test": "jest"
   },

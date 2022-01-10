@@ -1,8 +1,12 @@
 # **Disconomy** - a roleplay economy bot for Discord
 
-![GitHub tag main](https://img.shields.io/github/v/tag/stettdev/disconomy?label=main) ![GitHub last commit](https://img.shields.io/github/last-commit/stettdev/disconomy)
+[![invitation](https://img.shields.io/badge/Invite%20me-to%20your%20server-738ADB?logo=discord&logoColor=white)](https://discord.com/api/oauth2/authorize?client_id=925136385290153984&permissions=274877908992&scope=applications.commands%20bot)
+[![GitHub tag main](https://img.shields.io/github/v/tag/stettdev/disconomy?label=main)](#)
+[![GitHub last commit](https://img.shields.io/github/last-commit/stettdev/disconomy)](#)
 
 A Discord bot created for administrators of RP servers to provide them with a playable economy with bank accounts, shops and payments. It's focused on the role-playing aspect of the server rather than mechanical gaming and grind - it's flexible and easy to use for less knowledgeable players.
+
+**!!! DISCLAIMER:** Current version of Disconomy is not feature-complete, there will be bugs, issues, etc.
 
 ## **Table of contents**
 
@@ -11,6 +15,10 @@ A Discord bot created for administrators of RP servers to provide them with a pl
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [How to use it?](#how-to-use-it)
+    * [Setup commands](#setup-commands)
+    * [Player-related commands](#player-related-commands)
+    * [Bank account & money transfers](#bank-account--money-transfers)
+    * [Purchases & payments](#purchases--payments)
 * [Bot permissions](#bot-permissions)
 * [Contact the developer](#contact-the-developer)
 
@@ -33,15 +41,31 @@ This was the first-time use of Sequelize in a project. It's a surprisingly compl
 
 ## **How to use it?**
 
+Disconomy operates using slash ("/") commands. It allows players to quickly find commands without knowledge about specific prefix character for the bot or searching through "help" command as all the commands are easily scrollable in Discord input field.
+
+**!!! DISCLAIMER:** If you use any of the commands from this bot - a player account will be created to assist in this and further commands regarding your character. Player account is identified by user id and guild id in combination to allow players to join different guilds/servers and have accounts on them separated from each other.
+
 ### **Setup commands**
+
+[ IN PROGRESS ]
+
+### **Player-related commands**
 
 [ IN PROGRESS ]
 
 ### **Bank account & money transfers**
 
-[ IN PROGRESS ]
+Use `/account open` to **create a new bank account (only one per player).
+If you need to check how much money your account has, use `/account balance` command.
+The `/account close` command will close the account. All funds in the account will be gone as well.
 
-### **Shops**
+To transfer money between bank account and player's "wallet" you can use `/account deposit` and `/account withdraw` to put money in and take money from the bank account accordingly.
+
+For transfers between players you can use `/account transfer <@player> <amount>` command. Specify the recipient with mention `@player` and the `amount` of money you'd like to transfer to them. You cannot request a money transfer from other players.
+
+Checks are in place to ensure player cannot transfer more money than they have (neither to other player nor between account and wallet).
+
+### **Purchases & payments**
 
 [ IN PROGRESS ]
 
