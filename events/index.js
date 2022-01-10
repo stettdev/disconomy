@@ -1,7 +1,9 @@
-const ready = require('./ready');
-const interactionCreate = require('./interactionCreate');
+const Client = require('./client');
+const Guilds = require('./guilds');
+const Communication = require('./communication');
 
 module.exports = [
-  ready,
-  interactionCreate,
+  Client,
+  Guilds,
+  Communication,
 ];
