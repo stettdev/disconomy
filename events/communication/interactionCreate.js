@@ -1,3 +1,5 @@
+const Embeds = require('../../modules/embeds');
+
 module.exports = {
   name: 'interactionCreate',
   once: false,
@@ -10,14 +12,14 @@ module.exports = {
     if (!command) return;
 
     // Allow delayed response
-    await interaction.deferReply();
+    await interaction.deferReply({ ephemeral: command.ephemeral });
 
     // Execute command and deal with errors within
     try {
       await command.execute(interaction);
     } catch (error) {
       console.error(error);
-      await interaction.editReply({ content: 'There was an error while executing this command.', ephemeral: true });
+      await interaction.editReply({ embeds: [Embeds.Templates.errorEmbed('There was an error while executing this command.')] });
     }
   },
 };
