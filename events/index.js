@@ -1,7 +1,13 @@
-const ready = require('./ready');
-const interactionCreate = require('./interactionCreate');
+const Client = require('./client');
+const Guilds = require('./guilds');
+const Communication = require('./communication');
 
-module.exports = [
-  ready,
-  interactionCreate,
-];
+const events = [];
+
+[Client, Guilds, Communication].forEach(
+  (controller) => controller.forEach(
+    (event) => events.push(event),
+  ),
+);
+
+module.exports = events;
