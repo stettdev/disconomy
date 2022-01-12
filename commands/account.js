@@ -1,8 +1,10 @@
 const { SlashCommandBuilder, SlashCommandSubcommandBuilder } = require('@discordjs/builders');
 const requirePerson = require('../modules/requirePerson');
 const { Account, Person } = require('../database');
+const Embeds = require('../modules/embeds');
 
 const getAccount = async (ownerId) => Account.findOne({ where: { ownerId } });
+const info = (message) => Embeds.Templates.infoEmbed(message);
 
 const balance = {
   data: new SlashCommandSubcommandBuilder()
@@ -11,7 +13,9 @@ const balance = {
   async execute(person) {
     // Get account's balance
     const account = await getAccount(person.id);
-    return account ? `Account balance: ${account.balance}` : 'Account not found';
+    return account
+      ? info(`Account balance: ${account.balance}`)
+      : info('Account not found');
   },
 };
 
@@ -22,7 +26,9 @@ const open = {
   async execute(person) {
     // Create account
     const account = await Account.create({ ownerId: person.id });
-    return account ? 'Account successfully opened.' : 'Cannot open a new account.';
+    return account
+      ? info('Account successfully opened.')
+      : info('Cannot open a new account.');
   },
 };
 
@@ -33,7 +39,7 @@ const close = {
   async execute(person) {
     // Destroy account
     await Account.destroy({ where: { ownerId: person.id } });
-    return 'Account successfully closed';
+    return info('Account successfully closed');
   },
 };
 
@@ -45,12 +51,12 @@ const deposit = {
   async execute(person, options) {
     // Get person's account
     const account = await getAccount(person.id);
-    if (!account) return 'No account';
+    if (!account) return info('No account');
 
     // Get amount
     const amount = options.getInteger('amount');
-    if (amount === 0) return 'No transfer necessary.';
-    if (person.money < amount) return 'Not enough money to deposit.';
+    if (amount === 0) return info('No transfer necessary.');
+    if (person.money < amount) info('Not enough money to deposit.');
 
     // Deposit
     account.balance += amount;
@@ -60,7 +66,7 @@ const deposit = {
     account.save();
     person.save();
 
-    return 'Money has been transfered';
+    return info('Money has been transfered');
   },
 };
 
@@ -72,12 +78,12 @@ const withdraw = {
   async execute(person, options) {
     // Get person's account
     const account = await getAccount(person.id);
-    if (!account) return 'No account';
+    if (!account) return info('No account');
 
     // Get amount
     const amount = options.getInteger('amount');
-    if (amount === 0) return 'No transfer necessary.';
-    if (account.balance < amount) return 'Provided sum exceeds your account balance.';
+    if (amount === 0) return info('No transfer necessary.');
+    if (account.balance < amount) return info('Provided sum exceeds your account balance.');
 
     // Withdraw
     account.balance -= amount;
@@ -87,7 +93,7 @@ const withdraw = {
     account.save();
     person.save();
 
-    return 'Money has been transfered';
+    return info('Money has been transfered');
   },
 };
 
@@ -100,27 +106,27 @@ const transfer = {
   async execute(person, options) {
     // Get person's account
     const account = await getAccount(person.id);
-    if (!account) return 'No account';
+    if (!account) return info('No account');
 
     // Get amount
     const amount = options.getInteger('amount');
-    if (amount === 0) return 'No transfer necessary.'; // Zero sum transfer
-    if (account.balance < amount) return 'Provided sum exceeds your account balance.';
+    if (amount === 0) return info('No transfer necessary.'); // Zero sum transfer
+    if (account.balance < amount) return info('Provided sum exceeds your account balance.');
 
     // Get recipient
     const mention = options.getMentionable('recipient');
-    if (mention.constructor.name !== 'GuildMember') return 'Recipient is not a valid user.';
+    if (mention.constructor.name !== 'GuildMember') return info('Recipient is not a valid user.');
     const recipient = await Person.findOne({
       where: {
         guildId: mention.guild.id,
         userId: mention.id,
       },
     });
-    if (recipient === person) return 'No transfer necessary.'; // Transfer to yourself
+    if (recipient === person) return info('No transfer necessary.'); // Transfer to yourself
 
     // Get recipient account
     const recipientAccount = await getAccount(recipient.id);
-    if (!recipientAccount) return 'Recipient does not have an account.';
+    if (!recipientAccount) return info('Recipient does not have an account.');
 
     // Transfer
     account.balance -= amount;
@@ -130,7 +136,7 @@ const transfer = {
     account.save();
     recipientAccount.save();
 
-    return 'Money has been transfered';
+    return info('Money has been transfered');
   },
 };
 
@@ -147,6 +153,7 @@ module.exports = {
     .addSubcommand(deposit.data)
     .addSubcommand(withdraw.data)
     .addSubcommand(transfer.data),
+  ephemeral: true,
   async execute(interaction) {
     // Get person calling the command
     const person = await requirePerson(interaction.guildId, interaction.user.id);
@@ -159,6 +166,6 @@ module.exports = {
     const message = subcommand ? await subcommand.execute(person, interaction.options) : 'Subcommand not found.';
 
     // Respond
-    return interaction.editReply(message);
+    return interaction.editReply({ embeds: [message] });
   },
 };
