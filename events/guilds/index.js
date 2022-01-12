@@ -3,9 +3,9 @@ const guildDelete = require('./guildDelete');
 const guildUnavailable = require('./guildUnavailable');
 const guildMemberAdd = require('./guildMemberAdd');
 
-module.exports = {
+module.exports = [
   guildCreate,
   guildDelete,
   guildUnavailable,
   guildMemberAdd,
-};
+];

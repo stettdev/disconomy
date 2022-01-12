@@ -2,8 +2,7 @@ module.exports = {
   name: 'guildMemberAdd',
   once: true,
   execute: (member) => {
-    console.info(`New user joined the server.\n
-      USER: ${member.tag}\n
-      SERVER: ${member.guild.name} (${member.guild.id})`);
+    console.info(`${member.tag} joined the server.\n`
+        + `SERVER: ${member.guild.name} (${member.guild.id})`);
   },
 };

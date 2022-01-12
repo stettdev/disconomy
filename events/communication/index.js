@@ -1,7 +1,7 @@
 const message = require('./message');
 const interactionCreate = require('./interactionCreate');
 
-module.exports = {
+module.exports = [
   message,
   interactionCreate,
-};
+];

@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, SlashCommandSubcommandBuilder } = require('@discordjs/builders');
-const { requirePerson } = require('../middleware/personChecks');
+const requirePerson = require('../modules/requirePerson');
 const { Account, Person } = require('../database');
 
 const getAccount = async (ownerId) => Account.findOne({ where: { ownerId } });
