@@ -153,7 +153,7 @@ module.exports = {
     .addSubcommand(deposit.data)
     .addSubcommand(withdraw.data)
     .addSubcommand(transfer.data),
-  ephemeral: true,
+  privateResults: true,
   async execute(interaction) {
     // Get person calling the command
     const person = await requirePerson(interaction.guildId, interaction.user.id);

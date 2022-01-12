@@ -12,7 +12,7 @@ module.exports = {
     if (!command) return;
 
     // Allow delayed response
-    await interaction.deferReply({ ephemeral: command.ephemeral });
+    await interaction.deferReply({ ephemeral: command.privateResults });
 
     // Execute command and deal with errors within
     try {
