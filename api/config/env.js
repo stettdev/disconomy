@@ -4,10 +4,8 @@ module.exports = {
   Setup: {
     environment: process.env.NODE_ENV,
   },
-  Discord: {
-    token: process.env.DISCORD_TOKEN,
-    appId: process.env.DISCORD_APP_ID,
-    testGuild: process.env.DISCORD_GUILD_ID,
+  API: {
+    port: process.env.API_PORT,
   },
   MySQL: {
     database: process.env.MYSQL_DATABASE,

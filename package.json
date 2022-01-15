@@ -1,10 +1,22 @@
 {
+  "name": "disconomy",
+  "description": "Roleplay Economy Bot for Discord Servers",
+  "scripts": {
+    "bot": "node bot/app.js",
+    "api": "node api/api.js",
+    "lint": "eslint ."
+  },
+  "author": "Christopher Gocek",
+  "license": "SEE LICENSE IN LICENSE.md",
   "dependencies": {
     "@discordjs/builders": "^0.10.0",
     "@discordjs/rest": "^0.2.0-canary.0",
+    "axios": "^0.24.0",
+    "cors": "^2.8.5",
     "discord-api-types": "^0.26.0",
     "discord.js": "^13.4.0",
     "dotenv": "^10.0.0",
+    "express": "^4.17.2",
     "mysql2": "^2.3.3",
     "sequelize": "^6.12.2"
   },
@@ -12,34 +24,6 @@
     "eslint": "^8.5.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.3",
-    "jest": "^27.4.5",
-    "nodemon": "^2.0.15",
     "sequelize-cli": "^6.3.0"
-  },
-  "name": "disconomy",
-  "description": "Roleplay Economy Bot for Discord Servers",
-  "main": "app.js",
-  "scripts": {
-    "dev": "nodemon app.js",
-    "start": "node app.js",
-    "guildreg": "node ./utils/registerGuildCommands.js",
-    "globalreg": "node ./utils/registerGlobalCommands.js",
-    "lint": "eslint .",
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stettdev/disconomy.git"
-  },
-  "keywords": [
-    "economy",
-    "discord",
-    "bot"
-  ],
-  "author": "Christopher Gocek",
-  "license": "SEE LICENSE IN LICENSE.md",
-  "bugs": {
-    "url": "https://github.com/stettdev/disconomy/issues"
-  },
-  "homepage": "https://github.com/stettdev/disconomy#readme"
+  }
 }
