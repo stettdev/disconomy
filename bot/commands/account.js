@@ -3,15 +3,23 @@ const axios = require('axios');
 const Embeds = require('../modules/embeds');
 
 const info = (message) => Embeds.Templates.infoEmbed(message);
+const error = (message) => Embeds.Templates.errorEmbed(message);
 
 const balance = {
   data: new SlashCommandSubcommandBuilder()
     .setName('balance')
     .setDescription('Check amount of money in the account.'),
-  async execute(userData) {
-    const { guildId, userId } = userData;
-    const response = await axios.get(`http://localhost:3000/accounts/${guildId}.${userId}`);
-    return info(response.data);
+  async execute(guildId, userId) {
+    const address = `http://localhost:3000/accounts/1.${userId}/balance`;
+    let response;
+    try {
+      response = await axios.get(address);
+    } catch (e) {
+      console.error(e);
+      return error(e.message);
+    }
+
+    return info(`Account balance: ${response.data.balance}`);
   },
 };
 
@@ -88,7 +96,7 @@ module.exports = {
       (command) => command.data.name === interaction.options.getSubcommand(),
     );
     // Execute subcommand or return error message
-    const message = subcommand ? await subcommand.execute({ guild, user }, interaction.options) : 'Subcommand not found.';
+    const message = subcommand ? await subcommand.execute(guild, user, interaction.options) : 'Subcommand not found.';
 
     // Respond
     return interaction.editReply({ embeds: [message] });

@@ -6,6 +6,8 @@ module.exports = {
   },
   API: {
     port: process.env.API_PORT,
+    header_key: process.env.API_HEADER_KEY,
+    header_value: process.env.API_HEADER_VALUE,
   },
   MySQL: {
     database: process.env.MYSQL_DATABASE,

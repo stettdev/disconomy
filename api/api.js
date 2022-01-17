@@ -1,14 +1,19 @@
 const express = require('express');
 const cors = require('cors');
 const { API } = require('./config/env');
-const AccountsRouter = require('./routes/accounts');
+const mainRouter = require('./routes/main');
 
 const app = express();
 app.use(cors({
   origin: 'http://localhost',
 }));
 
-app.use('/accounts', AccountsRouter);
+app.use(express.json());
+app.use(express.urlencoded({
+  extended: true,
+}));
+
+app.use('/', mainRouter);
 
 app.listen(API.port, () => {
   console.info(`Listening at http://localhost:${API.port}`);
