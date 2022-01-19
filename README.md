@@ -59,7 +59,7 @@ To transfer money between bank account and player's "wallet" you can use `/accou
 
 For transfers between players you can use `/account transfer <@player> <amount>` command. Specify the recipient with mention `@player` and the `amount` of money you'd like to transfer to them. You cannot request a money transfer from other players.
 
-Checks are in place to ensure player cannot transfer more money than they have (neither to other player nor between account and wallet).
+Checks are in place to ensure player cannot transfer more money that they have (neither to other player nor between account and wallet).
 
 ### **Purchases & payments**
 
