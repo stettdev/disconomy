@@ -1,25 +1,32 @@
 const { SlashCommandBuilder, SlashCommandSubcommandBuilder } = require('@discordjs/builders');
 const axios = require('axios');
+const { API } = require('../config/env');
 const Embeds = require('../modules/embeds');
 
 const info = (message) => Embeds.Templates.infoEmbed(message);
 const error = (message) => Embeds.Templates.errorEmbed(message);
+
+const host = `http://localhost:${API.port}`;
+
+const url = {
+  getPersonId: (guildId, userId) => `${host}/people/${guildId}.${userId}`,
+  getPersonalAccount: (personId) => `${host}/accounts/${personId}`,
+};
 
 const balance = {
   data: new SlashCommandSubcommandBuilder()
     .setName('balance')
     .setDescription('Check amount of money in the account.'),
   async execute(guildId, userId) {
-    const address = `http://localhost:3000/accounts/1.${userId}/balance`;
-    let response;
     try {
-      response = await axios.get(address);
+      const person = await axios.get(url.getPersonId(guildId, userId));
+      const account = await axios.get(url.getPersonalAccount(person.data.id));
+
+      return info(`Account balance: ${account.data.balance}`);
     } catch (e) {
       console.error(e);
       return error(e.message);
     }
-
-    return info(`Account balance: ${response.data.balance}`);
   },
 };
 
