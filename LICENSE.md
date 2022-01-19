@@ -1,2 +1,1 @@
-
-Copyright (C) 2021 Christopher Gocek
+# Copyright (C) 2021 Christopher Gocek

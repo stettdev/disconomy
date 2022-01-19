@@ -28,10 +28,6 @@ A Discord bot created for administrators of RP servers to provide them with a pl
 
 JavaScript and Node.js seemed to be the best choice due to previous experience developing in these technologies. Discord.js is a well-written module with vast and clear documentation which allowed understanding it and writing suitable code.
 
-[![Sequelize](https://img.shields.io/badge/Sequelize-v6-03AFEF?logo=Sequelize&logoColor=fff)](https://www.sequelize.org/) [![MySQL](https://img.shields.io/badge/MySQL-8.0-F29111?logo=mySQL&logoColor=fff)](https://www.mysql.com/)
-
-This was the first-time use of Sequelize in a project. It's a surprisingly complex ORM for SQL database solutions but the documentation explains everything well and the project was developed rather quickly using it.
-
 ## **Setup**
 
 * [Invite](https://discord.com/api/oauth2/authorize?client_id=925136385290153984&permissions=274877908992&scope=applications.commands%20bot) the bot to your server. It will display which permissions are required for it to work.
@@ -40,6 +36,8 @@ This was the first-time use of Sequelize in a project. It's a surprisingly compl
 ## **How to use it?**
 
 Disconomy operates using slash ("/") commands. It allows players to quickly find commands without knowledge about specific prefix character for the bot or searching through "help" command as all the commands are easily scrollable in Discord input field.
+
+Every command called in this bot uses [Diserver API](https://github.com/stettdev/diserver) to receive and modify the data.
 
 **!!! DISCLAIMER:** If you use any of the commands from this bot - a player account will be created to assist in this and further commands regarding your character. Player account is identified by user id and guild id in combination to allow players to join different guilds/servers and have accounts on them separated from each other.
 
@@ -80,4 +78,4 @@ The preferred way of contact is an email or through the community on Discord ser
 
 ---
 
-Copyright 2021 &copy; **Christopher Gocek**
+Copyright 2022 &copy; **Christopher Gocek**
