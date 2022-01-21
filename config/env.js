@@ -5,6 +5,7 @@ module.exports = {
     environment: process.env.NODE_ENV,
   },
   API: {
+    host: process.env.API_HOST,
     port: process.env.API_PORT,
     headerKey: process.env.API_HEADER_KEY,
     headerValue: process.env.API_HEADER_VALUE,
