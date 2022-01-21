@@ -1,5 +1,3 @@
 const baseEmbed = require('./baseEmbed');
 
-const errorEmbed = (message) => baseEmbed(message).setColor('DARK_ORANGE');
-
-module.exports = errorEmbed;
+module.exports = (message) => baseEmbed(message).setColor('DARK_ORANGE');
