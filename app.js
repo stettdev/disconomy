@@ -1,8 +1,8 @@
 const { Client, Intents, Collection } = require('discord.js');
 const { Discord } = require('./config/env');
 const Events = require('./events');
-const Commands = require('./commands');
-const Buttons = require('./buttons');
+const Commands = require('./interactions/commands');
+const Buttons = require('./interactions/buttons');
 
 // Create Discord client
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
