@@ -10,7 +10,7 @@ const subcommands = [];
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName('bank')
+    .setName('account')
     .setDescription('BANK'),
   privateResults: true,
   async execute(interaction) {
