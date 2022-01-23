@@ -1,6 +1,6 @@
 # **Disconomy** - a roleplay economy bot for Discord
 
-[![invitation](https://img.shields.io/badge/Invite%20me-to%20your%20server-738ADB?logo=discord&logoColor=white)](https://discord.com/api/oauth2/authorize?client_id=925136385290153984&permissions=274877908992&scope=applications.commands%20bot) ![GitHub tag main](https://img.shields.io/github/v/tag/stettdev/disconomy?label=main) ![GitHub last commit](https://img.shields.io/github/last-commit/stettdev/disconomy) [![CodeFactor](https://www.codefactor.io/repository/github/stettdev/disconomy/badge)](https://www.codefactor.io/repository/github/stettdev/disconomy)
+[![invitation](https://img.shields.io/badge/Invite%20me-to%20your%20server-738ADB?logo=discord&logoColor=white)](https://discord.com/api/oauth2/authorize?client_id=925136385290153984&permissions=274877908992&scope=applications.commands%20bot) ![GitHub tag version](https://img.shields.io/github/v/tag/stettdev/disconomy?label=version) ![GitHub last commit](https://img.shields.io/github/last-commit/stettdev/disconomy) [![CodeFactor](https://www.codefactor.io/repository/github/stettdev/disconomy/badge)](https://www.codefactor.io/repository/github/stettdev/disconomy)
 
 A Discord bot created for administrators of RP servers to provide them with a playable economy with bank accounts, shops and payments. It's focused on the role-playing aspect of the server rather than mechanical gaming and grind - it's flexible and easy to use for less knowledgeable players.
 
