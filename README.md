@@ -72,9 +72,9 @@ Checks are in place to ensure player cannot transfer more money that they have (
 
 ## **Contact the developer**
 
-The preferred way of contact is an email or through the community on Discord server linked below.
+The preferred way of contact is a communication via an email.
 
-[![Email](https://img.shields.io/badge/email-contact@stett.dev-731C7F?logo=minutemailer&logoColor=fff)](mailto:contact@stett.dev) [![Discord](https://img.shields.io/discord/883358379869896784?color=%237289da&label=join&logo=discord&logoColor=%23ffffff)](https://discord.gg/kfTHe77twD)
+[![Email](https://img.shields.io/badge/email-contact@stett.dev-731C7F?logo=minutemailer&logoColor=fff)](mailto:contact@stett.dev)
 
 ---
 
